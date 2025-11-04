@@ -6,12 +6,14 @@ basic arithmetic operations.
 
 """
 
+
 class Calculator:
     """
     A calculator class for basic arithmetic operations.
-    Class supports operations: addition, subtraction,multiplication, and division
-    between two numeric operands. Before performing any operation, the operands
-    are validated to ensure they are numeric types (`int` or `float`).
+    Class supports operations: addition, subtraction,multiplication, and
+    division between two numeric operands. Before performing any operation,
+    the operands are validated to ensure they are numeric
+    types (`int` or `float`).
 
     Attributes:
         __op1: The first operand.
@@ -33,15 +35,17 @@ class Calculator:
         """
         Validate that the operands are numeric types.
 
-        This method checks whether both `self.__op1` and `self.__op2` are instances
-        of `int` or `float`. If either operand is not numeric,`TypeError` is raised
-        with an explanatory message.
+        This method checks whether both `self.__op1` and `self.__op2` are
+        instances of `int` or `float`. If either operand is not numeric,
+        `TypeError` is raised with an explanatory message.
 
         Raises:
-            TypeError: If either `self.__op1` or `self.__op2` is not an int or float.
+            TypeError: If either `self.__op1` or `self.__op2`
+            is not an int or float.
 
         """
-        if not (isinstance(self.__op1, (int, float)) and isinstance(self.__op2, (int, float))):
+        if not (isinstance(self.__op1, (int, float))
+                and isinstance(self.__op2, (int, float))):
             raise TypeError
 
     def sum(self):
@@ -102,6 +106,7 @@ class Calculator:
             return "You cannot divide by zero"
         except TypeError:
             return "Both operands must be numbers"
+
 
 if __name__ == "__main__":
     calculator = Calculator(10, 2)
