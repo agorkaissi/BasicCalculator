@@ -20,4 +20,4 @@ jobs:
         pip install pylint pytest
     - name: Analysing the code with pylint
       run: |
-        pylint --ignore=test_calculator.py $(git ls-files '*.py')
+        pylint --ignore-patterns="test_.*\.py" $(git ls-files '*.py')
